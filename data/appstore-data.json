@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name" : "SimCity BuildIt",      
+      "slogan" : "Build your extraordinary city.",
+      "description" : "",
+      "price" : 2.99,
+      "inAppPurchase" : 1,
+      "featured" : 1,
+      "category" : "Simulation",
+      "developer" : "",
+      "icon" : "sim-city.webp",
+      "bigImage" : ""
+    },
+    {
+      "name" : "Fallout Shelter",      
+      "slogan" : "A Better Life, Underground",
+      "description" : "",
+      "price" : "Free",      
+      "inAppPurchase" : 1,
+      "featured" : 1,
+      "category" : "Simulation",
+      "developer" : "",
+      "icon" : "fallout-shelter.webp",
+      "bigImage" : ""
+    }
+  ]
+}
