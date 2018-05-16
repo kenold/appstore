@@ -7,9 +7,15 @@ body {
     align-content: flex-start;
     background: #fff;
     padding: 1rem;
+    align-items: center;
 }
 .media-body {
     flex: 1;
+}
+.media .media-category {
+    color: #444;
+    margin: 0;
+
 }
 .media-cover {
     margin-right: 1rem;
