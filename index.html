@@ -29,15 +29,21 @@
                             <h3 class="media-title">{{name}}</h3>
                             <p class="media-slogan">{{slogan}}</p>
                         </div>
-                        <aside>                                                                                                              
-                            {{#ifEquals price "Free"}}
-                                <div class="btn-price">Get</div>
-                                {{#if inAppPurchase}}                                    
-                                    <p class="in-app">In-App Purchases</p>
-                                {{/if}}
-                            {{else}}
-                                <div class="btn-price">${{price}}</div>
-                            {{/ifEquals}}                            
+                        <aside>
+                            {{#if wasDownloaded }}
+                                <span class="cloud">
+                                    <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
+                                </span>
+                            {{else}}                                                                                                            
+                                {{#ifEquals price "Free"}}
+                                    <div class="btn-price">Get</div>
+                                    {{#if inAppPurchase}}                                    
+                                        <p class="in-app">In-App Purchases</p>
+                                    {{/if}}
+                                {{else}}
+                                    <div class="btn-price">${{price}}</div>
+                                {{/ifEquals}} 
+                            {{/if}}                           
                         </aside>                        
                     </div> <!-- /.media-->
                 {{/each}}
