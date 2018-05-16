@@ -3,6 +3,7 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
 
 /* -- TOP LEVEL FUNCTIONS
     gulp.task -> defines tasks
@@ -11,26 +12,25 @@ const concat = require('gulp-concat');
     gulp.watch -> watch filed & folder for changes
 */
 
-// minify JS
-gulp.task('minify', function(){
-    gulp.src('src/js/*.js')
-      .pipe(uglify())    
-      .pipe(gulp.dest('dist/js'));
-});
-
-// compile sass into CSS, outputStyle: 'compressed' or 'expanded'
+// TASK: compile sass into CSS, outputStyle: 'compressed' or 'expanded'
 gulp.task('sass', function(){
-    gulp.src('src/scss/*.scss')
+    return gulp.src(['src/scss/*.scss'])
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
       .pipe(concat('main.css'))
-      .pipe(rename('main.min.css'))
-      .pipe(gulp.dest('dist/css'));
+      //.pipe(rename('main.min.css'))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(browserSync.stream());
 });
 
-// run all tasks above at once with 'gulp'
-gulp.task('default', ['sass']);
+// TASK: watch & serve
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        server: "./"        
+    });
 
-// watch for changes "gulp watch"
-gulp.task('watch', function() {
-    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch(['src/scss/*.scss'], ['sass']);
+    gulp.watch('*.html').on('change', browserSync.reload);
 });
+
+// TASK: Default
+gulp.task('default', ['serve']);
