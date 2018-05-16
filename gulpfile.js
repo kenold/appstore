@@ -1,10 +1,8 @@
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
 
 /* -- TOP LEVEL FUNCTIONS
     gulp.task -> defines tasks
@@ -13,24 +11,6 @@ const browserSync = require('browser-sync').create();
     gulp.watch -> watch filed & folder for changes
 */
 
-//  logs message
-gulp.task('message', function(){
-    return console.log("Gulp is running Ken...");
-});
-
-// copy all HTML files
-gulp.task('copyHtml', function() {
-    gulp.src('src/*.html')
-      .pipe(gulp.dest('dist'));
-});
-
-// optimize images
-gulp.task('imageMin', function(){
-    gulp.src('src/images/*')
-      .pipe(imagemin())
-      .pipe(gulp.dest('dist/images'));
-});
-
 // minify JS
 gulp.task('minify', function(){
     gulp.src('src/js/*.js')
@@ -38,49 +18,19 @@ gulp.task('minify', function(){
       .pipe(gulp.dest('dist/js'));
 });
 
-// compile sass into CSS
+// compile sass into CSS, outputStyle: 'compressed' or 'expanded'
 gulp.task('sass', function(){
     gulp.src('src/scss/*.scss')
-      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
       .pipe(concat('main.css'))
       .pipe(rename('main.min.css'))
       .pipe(gulp.dest('dist/css'));
 });
 
-// concat JS files
-gulp.task('scripts', function() {
-    gulp.src('src/js/*.js')
-      .pipe(concat('main.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('dist/js'))
-});
-
-// static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./dist"
-        }
-    });
-});
-
 // run all tasks above at once with 'gulp'
-gulp.task('default', ['message', 'copyHtml', 'imageMin', 'sass', 'scripts', 'browser-sync']);
+gulp.task('default', ['sass']);
 
-/* watch for changes "gulp watch"
+// watch for changes "gulp watch"
 gulp.task('watch', function() {
-    gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/images/*', ['imageMin']);
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/*.html', ['copyHtml']);
-}); */
-
-// watch for changes "gulp watch" then live reload server
-gulp.task('watch', ['browser-sync'], function() {
-    gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/images/*', ['imageMin']);
-    gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/*.html', ['copyHtml']);
-    gulp.watch('src/*.html').on('change', browserSync.reload);
 });
-    
