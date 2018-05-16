@@ -1,16 +1,18 @@
 @import "partials/colors";
 
+$ff: 'Roboto', sans-serif;
+
 @mixin border-radius($radius: 10px) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
-        border-radius: $radius;
+    border-radius: $radius;
 }
 
 body {
     padding: 1.5rem;
     background: $bg-color;
-    font-family: 'Roboto', sans-serif;
+    font-family: $ff;
     font-weight: 400;
     font-size: 1rem;
 }
