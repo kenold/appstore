@@ -5,18 +5,33 @@ body {
     font-weight: 400;
     font-size: 1rem;
 }
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+}
 .media {
     display: flex;
     align-content: flex-start;
-    background: #fff;
-    padding: 1rem;
+    padding: 16px;
     align-items: center;
+    position: relative;
+}
+
+.media:after {
+    content: "";
+    position: absolute;
+    left: 82px;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 98px);
+    border-bottom: 1px solid #e6e6e6;
 }
 .media-body {
     flex: 1;
 }
 .media-cover {
-    margin-right: 1rem;;
+    margin-right: 16px;
 }
 .media-cover img {
     width: 50px;
@@ -37,4 +52,5 @@ aside .btn-cta {
     background-color: #eee;
     padding: .4rem 1.6rem;
     border-radius: 15px;
+    align-self: flex-end;
 }
