@@ -11,43 +11,64 @@
 <body>
 
     <div class="container">
-        <section class="simulation">
+        <section class="featured">
             <header>
-                <div class="category">The Daily List</div>
-                <h1 class="heading">We Built This City</h1>
+                <div class="date">Wednesday, May 16</div>
+                <h1 class="heading-today">Today</h1>
             </header>
+            <div class="box">                
+                <div class="featured-container">
+                    <div class="ft-image">
+                        <img src="assets/images/icons/township_big.webp" alt="Feature Image">
+                    </div>
+                    <div class="content">
+                        <div class="ft-category">AR Rising</div>
+                        <h1 class="ft-title">New Ways to Learn: Art and Culture</h1>
+                        <div class="ft-summary">Education apps that add another dimension.</div>
+                    </div>
+                </div>
+            </div> <!-- /.box -->           
+        </section>
 
-            <div id="apps-container"></div>
+        <section class="simulation">
+            <div class="box">
+                <header>
+                    <div class="category">The Daily List</div>
+                    <h1 class="heading">We Built This City</h1>
+                </header>
 
-            <script id="apps-template" type="text/x-handlebars-template">
-                {{#each apps}}
-                    <div class="media">
-                        <div class="media-cover">
-                            <img src="assets/images/icons/{{icon}}" alt="{{name}}">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-title">{{name}}</h3>
-                            <p class="media-slogan">{{slogan}}</p>
-                        </div>
-                        <aside>
-                            {{#if wasDownloaded }}
-                                <span class="cloud">
-                                    <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
-                                </span>
-                            {{else}}                                                                                                            
-                                {{#ifEquals price "Free"}}
-                                    <div class="btn-price">Get</div>
-                                    {{#if inAppPurchase}}                                    
-                                        <p class="in-app">In-App Purchases</p>
-                                    {{/if}}
-                                {{else}}
-                                    <div class="btn-price">${{price}}</div>
-                                {{/ifEquals}} 
-                            {{/if}}                           
-                        </aside>                        
-                    </div> <!-- /.media-->
-                {{/each}}
-            </script>                        
+                <div id="apps-container"></div>
+
+                <script id="apps-template" type="text/x-handlebars-template">
+                    {{#each apps}}
+                        <div class="media">
+                            <div class="media-cover">
+                                <img src="assets/images/icons/{{icon}}" alt="{{name}}">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-title">{{name}}</h3>
+                                <p class="media-slogan">{{slogan}}</p>
+                            </div>
+                            <aside>
+                                {{#if wasDownloaded }}
+                                    <span class="cloud">
+                                        <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
+                                    </span>
+                                {{else}}                                                                                                            
+                                    {{#ifEquals price "Free"}}
+                                        <div class="btn-price">Get</div>
+                                        {{#if inAppPurchase}}                                    
+                                            <p class="in-app">In-App Purchases</p>
+                                        {{/if}}
+                                    {{else}}
+                                        <div class="btn-price">${{price}}</div>
+                                    {{/ifEquals}} 
+                                {{/if}}                           
+                            </aside>                        
+                        </div> <!-- /.media-->
+                    {{/each}}
+                </script>
+            </div> <!-- /.box>
         </section> <!-- /.simulation -->
     </div> <!-- /.container -->
     
