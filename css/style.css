@@ -2,6 +2,8 @@ body {
     padding: 1rem;
     background: #e6e6e6;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 .media {
     display: flex;
@@ -13,19 +15,23 @@ body {
 .media-body {
     flex: 1;
 }
-.media .media-category {
-    color: #a6a6a6;
-    margin: 0;
-
-}
 .media-cover {
-    margin-right: 1rem;
+    margin-right: 1rem;;
 }
 .media-cover img {
+    width: 50px;
     border-radius: 10px;
 }
 .media-title {
-    margin: 0 0 .5rem;
+    margin: 0 1rem .2rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.media .media-category {
+    color: #a6a6a6;
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 300;;
 }
 aside .btn-cta {
     background-color: #eee;
