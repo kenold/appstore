@@ -23,6 +23,30 @@
       "developer" : "",
       "icon" : "fallout-shelter.webp",
       "bigImage" : ""
-    }
+    },
+    {
+      "name" : "Forge of Empires",      
+      "slogan" : "Strategic building game",
+      "description" : "",
+      "price" : "Free",      
+      "inAppPurchase" : 0,
+      "featured" : 1,
+      "category" : "Simulation",
+      "developer" : "",
+      "icon" : "forge-of-empires.webp",
+      "bigImage" : ""
+    },
+    {
+      "name" : "Township",      
+      "slogan" : "Turn a town into a metropolis",
+      "description" : "",
+      "price" : "Free",      
+      "inAppPurchase" : 0,
+      "featured" : 1,
+      "category" : "Simulation",
+      "developer" : "",
+      "icon" : "township.webp",
+      "bigImage" : ""
+    }   
   ]
 }
