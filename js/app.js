@@ -23,3 +23,12 @@ function createHTML(appsData) {
     var appsContainer = document.getElementById("apps-container");
     appsContainer.innerHTML = ourGeneratedHTML;
 }
+
+// helpers
+Handlebars.registerHelper('ifEquals', function(a, b, options) {
+  if (a === b) {
+    return options.fn(this);
+  }
+
+  return options.inverse(this);
+});
