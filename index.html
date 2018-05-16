@@ -8,66 +8,45 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 
     <title>AppStore CSS</title>
 </head>
-<body>
-
-    <div id="apps-container"></div>
-
-    <script id="apps-template" type="text/x-handlebars-template">
-        {{#each apps}}
-            {{name}}
-        {{/each}}
-    </script>
+<div>
 
     <div class="container">
-        <section class="dragons">
+        <section class="simulation">
             <header>
                 <div class="category">The Daily List</div>
                 <h1 class="heading">Enter the Dragons</h1>
             </header>
-            <div class="media">
-                <div class="media-cover">
-                    <img src="assets/images/icons/dragonvale-world.png" alt="DragonVale World">
-                </div>
-                <div class="media-body">
-                    <h3 class="media-title">DragonVale World</h3>
-                    <p class="media-slogan">Build a dragon sanctuary!</p>
-                </div>
-                <aside>
-                    <div class="btn-cta">Get</div>
-                    <p class="in-app">In-App Purchases</p>
-                </aside>
-            </div>
 
-            <div class="media">
-                <div class="media-cover">
-                    <img src="assets/images/icons/dragonvale-world.png" alt="DragonVale World">
-                </div>
-                <div class="media-body">
-                    <h3 class="media-title">DragonVale World</h3>
-                    <p class="media-slogan">Build a dragon sanctuary!</p>
-                </div>
-                <aside>
-                    <div class="download">
-                        <img src="assets/images/icons/cloud.png" alt="">
-                    </div>
-                </aside>
-            </div>
+            <div id="apps-container"></div>
 
-            <div class="media">
-                <div class="media-cover">
-                    <img src="assets/images/icons/dragonvale-world.png" alt="DragonVale World">
-                </div>
-                <div class="media-body">
-                    <h3 class="media-title">DragonVale World</h3>
-                    <p class="media-slogan">Build a dragon sanctuary!</p>
-                </div>
-                <aside>
-                    <div class="btn-cta">$2.99</div>
-                    <p class="in-app">In-App Purchases</p>
-                </aside>
-            </div>
+            <script id="apps-template" type="text/x-handlebars-template">
+                {{#each apps}}
+                    <div class="media">
+                        <div class="media-cover">
+                            <img src="assets/images/icons/{{icon}}" alt="{{name}}">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-title">{{name}}</h3>
+                            <p class="media-slogan">{{slogan}}</p>
+                        </div>
+                        <aside>                                                                                                              
+                            {{#ifEquals price "Free"}}
+                                <div class="btn-price">{{price}}</div>                                    
+                                <p class="in-app">In-App Purchases</p>                                
+                            {{else}}
+                                <div class="btn-price">${{price}}</div>
+                            {{/ifEquals}}                            
+                        </aside>                        
+                    </div> <!-- /.media-->
+                {{/each}}
+            </script>                        
         </section>
     </div>
+    
+
+        
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="js/app.js"></script>
 </body>
