@@ -25,12 +25,12 @@ header {
         color: #a6a6a6;
         text-transform: uppercase;
         font-size: .9rem;
-        font-weight: 400;;
+        font-weight: 400;
     }
     .heading {
         margin: .5rem 0;
         font-weight: 700;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -76,7 +76,6 @@ aside {
         background-color: $btn-color;
         padding: .4rem;
         border-radius: 15px;
-        align-self: flex-end;
         text-transform: uppercase;
         font-weight: 500;
         color: $accent;
@@ -84,8 +83,9 @@ aside {
         box-sizing: border-box;
     }
     .in-app {
-        font-size: .6rem;
+        font-size: .65rem;
         color: $lighter-color;
+        font-weight: 400;
     }
     .cloud img {
         padding: .4rem 1.4rem;
