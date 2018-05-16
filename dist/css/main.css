@@ -18,6 +18,8 @@ header {
 header .category {
   color: #a6a6a6;
   text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 400;
 }
 
 header .heading {
@@ -41,7 +43,7 @@ header .heading {
   bottom: 0;
   height: 1px;
   width: calc(100% - 98px);
-  border-bottom: 1px solid #cdced3;
+  border-bottom: 1px solid #eee;
 }
 
 .media-body {
@@ -60,14 +62,13 @@ header .heading {
 .media-title {
   margin: 0 1rem .2rem 0;
   font-size: .9rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .media .media-slogan {
   color: #8e8e93;
   margin: 0;
   font-size: .8rem;
-  font-weight: 300;
 }
 
 aside {
@@ -81,7 +82,6 @@ aside .btn-price {
   align-self: flex-end;
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: .9;
   color: #007aff;
   width: 80px;
   box-sizing: border-box;
