@@ -1,5 +1,5 @@
 body {
-    padding: 3rem;
+    padding: 1rem;
     background: #e6e6e6;
 }
 .media {
@@ -13,18 +13,21 @@ body {
     flex: 1;
 }
 .media .media-category {
-    color: #444;
+    color: #a6a6a6;
     margin: 0;
 
 }
 .media-cover {
     margin-right: 1rem;
 }
+.media-cover img {
+    border-radius: 10px;
+}
 .media-title {
     margin: 0 0 .5rem;
 }
 aside .btn-cta {
     background-color: #eee;
-    padding: .4rem 2rem;
+    padding: .4rem 1.6rem;
     border-radius: 15px;
 }
