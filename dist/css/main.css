@@ -34,7 +34,7 @@ header .heading {
   position: relative;
 }
 
-.media:after {
+.media:not(:last-child):after {
   content: "";
   position: absolute;
   left: 82px;

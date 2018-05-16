@@ -32,7 +32,7 @@ header {
     padding: 16px;
     align-items: center;
     position: relative;
-    &:after {
+    &:not(:last-child):after {
         content: "";
         position: absolute;
         left: 82px;
