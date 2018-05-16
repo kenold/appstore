@@ -1,0 +1,99 @@
+body {
+  padding: 1.5rem;
+  background: #e6e6e6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+}
+
+header {
+  padding: 16px 16px 0;
+}
+
+header .category {
+  color: #a6a6a6;
+  text-transform: uppercase;
+}
+
+header .heading {
+  margin: .5rem 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.media {
+  display: flex;
+  align-content: flex-start;
+  padding: 16px;
+  align-items: center;
+  position: relative;
+}
+
+.media:after {
+  content: "";
+  position: absolute;
+  left: 82px;
+  bottom: 0;
+  height: 1px;
+  width: calc(100% - 98px);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.media-body {
+  flex: 1;
+}
+
+.media-cover {
+  margin-right: 16px;
+}
+
+.media-cover img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.media-title {
+  margin: 0 1rem .2rem 0;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.media .media-slogan {
+  color: #a6a6a6;
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+aside {
+  text-align: center;
+}
+
+aside .btn-price {
+  background-color: #eee;
+  padding: .4rem 1.4rem;
+  border-radius: 15px;
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .9;
+  color: blue;
+  width: 100px;
+  box-sizing: border-box;
+}
+
+aside .in-app {
+  font-size: .6rem;
+  color: #a6a6a6;
+}
+
+aside .download img {
+  padding: .4rem 1.4rem;
+  width: 30px;
+  fill: blue;
+}
