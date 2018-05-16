@@ -31,8 +31,10 @@
                         </div>
                         <aside>                                                                                                              
                             {{#ifEquals price "Free"}}
-                                <div class="btn-price">Get</div>                                    
-                                <p class="in-app">In-App Purchases</p>                                
+                                <div class="btn-price">Get</div>
+                                {{#if inAppPurchase}}                                    
+                                    <p class="in-app">In-App Purchases</p>
+                                {{/if}}
                             {{else}}
                                 <div class="btn-price">${{price}}</div>
                             {{/ifEquals}}                            
