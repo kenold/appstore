@@ -1,3 +1,4 @@
+@import "partials/variables";
 @import "partials/colors";
 @import "helpers/mixins";
 
@@ -21,10 +22,10 @@ section {
             transform: scale(0.99);
         }
         header {
-            padding: 16px 16px 0;
+            padding:  $main-padding $main-padding 0;
         }
         .media {
-            padding: 16px;
+            padding: $main-padding;
         }
     }
     h1, h5 {
@@ -48,10 +49,10 @@ section {
 // FEATURED
 .featured {
     header {
-        padding: 16px 0;
+        padding:  $main-padding 0;
     }
     .content {
-        padding: 10px 16px;
+        padding: 10px  $main-padding;
         .ft-title {
             font-size: 1.8rem;
             margin: 0;
@@ -156,7 +157,7 @@ header {
         color: $lighter-color;        
         text-transform: uppercase;
         font-size: .8rem;
-        font-weight: 500;
+        font-weight: 400;
     }
     .date-heading {
         margin: .3rem 0;
@@ -168,7 +169,7 @@ header {
 .media {
     display: flex;
     align-content: flex-start;
-    padding: 16px 0;
+    padding:  $main-padding 0;
     align-items: center;
     position: relative;
     &:not(:last-child):after {
@@ -185,7 +186,7 @@ header {
     flex: 1;
 }
 .media-cover {
-    margin-right: 16px;
+    margin-right:  $main-padding;
     img {
         width: 50px;
         @include border-radius();
