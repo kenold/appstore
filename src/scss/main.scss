@@ -44,6 +44,7 @@ section {
             margin: 0;
         }
     }
+
     .ft-image {
         position: relative;
         img {
@@ -51,7 +52,8 @@ section {
             @include border-radius(10px, 10px, 0, 0);
         }
         .btn-play {
-            color: red;
+            font-size: 1.5rem;
+            opacity: .8;
             position: absolute;
             top: 50%;
             left: 50%;
