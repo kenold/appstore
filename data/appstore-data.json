@@ -51,6 +51,58 @@
       "developer" : "",
       "icon" : "township.jpg",
       "bigImage" : ""
+    },
+    {
+      "name" : "Meditation for Kids",      
+      "slogan" : "Health & Fitness",
+      "description" : "",
+      "price" : "0.99",      
+      "inAppPurchase" : 0,
+      "featured" : 0,
+      "wasDownloaded" : 0,
+      "category" : "Kids",
+      "developer" : "",
+      "icon" : "meditations-kids.jpg",
+      "bigImage" : ""
+    },
+    {
+      "name" : "The Human Body",      
+      "slogan" : "Explore & learn anatomy.",
+      "description" : "",
+      "price" : "3.99",      
+      "inAppPurchase" : 1,
+      "featured" : 0,
+      "wasDownloaded" : 0,
+      "category" : "Kids",
+      "developer" : "",
+      "icon" : "human-body.jpg",
+      "bigImage" : ""
+    },
+    {
+      "name" : "Dr. Panda Bath Time",      
+      "slogan" : "Education",
+      "description" : "",
+      "price" : "2.99",      
+      "inAppPurchase" : 0,
+      "featured" : 0,
+      "wasDownloaded" : 0,
+      "category" : "Kids",
+      "developer" : "",
+      "icon" : "dr-panda-bath.jpg",
+      "bigImage" : ""
+    },
+    {
+      "name" : "My Food - Nutrition for Kids",      
+      "slogan" : "Education",
+      "description" : "",
+      "price" : "2.99",      
+      "inAppPurchase" : 0,
+      "featured" : 0,
+      "wasDownloaded" : 0,
+      "category" : "Kids",
+      "developer" : "",
+      "icon" : "my-food-kids.jpg",
+      "bigImage" : ""
     }   
   ]
 }
