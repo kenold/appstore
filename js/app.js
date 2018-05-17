@@ -1,3 +1,14 @@
+$( document ).ready(function() {
+	// display date
+	var day = moment().format('dddd');
+	var month = moment().format('MMMM');
+	var dayNumber = moment().format('D');
+
+	var longDate = day + ', ' + month + ' ' + dayNumber;
+	$('.date-sub').first().html(longDate);
+});
+
+// get data
 var ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', 'data/appstore-data.json');
 ourRequest.onload = function() {
