@@ -10,7 +10,7 @@
       "wasDownloaded" : 0,
       "category" : "Simulation",
       "developer" : "",
-      "icon" : "sim-city.webp",
+      "icon" : "sim-city.jpg",
       "bigImage" : ""
     },
     {
@@ -23,7 +23,7 @@
       "wasDownloaded" : 1,
       "category" : "Simulation",
       "developer" : "",
-      "icon" : "fallout-shelter.webp",
+      "icon" : "fallout-shelter.jpg",
       "bigImage" : ""
     },
     {
@@ -36,7 +36,7 @@
       "wasDownloaded" : 0,
       "category" : "Simulation",
       "developer" : "",
-      "icon" : "forge-of-empires.webp",
+      "icon" : "forge-of-empires.jpg",
       "bigImage" : ""
     },
     {
@@ -49,7 +49,7 @@
       "wasDownloaded" : 0,
       "category" : "Simulation",
       "developer" : "",
-      "icon" : "township.webp",
+      "icon" : "township.jpg",
       "bigImage" : ""
     }   
   ]
