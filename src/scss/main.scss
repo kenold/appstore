@@ -11,6 +11,10 @@ body {
     font-size: 1rem;
 }
 
+.container {
+    max-width: 414px;
+    margin: 0 auto;
+}
 section {        
     margin-bottom: 1.4rem;       
     .box {
