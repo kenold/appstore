@@ -25,6 +25,10 @@ section .box:hover {
   transform: scale(0.99);
 }
 
+section h1 {
+  margin: 0;
+}
+
 section h4 {
   color: #8e8e93;
   font-weight: 400;
@@ -79,11 +83,50 @@ section p {
   font-size: 1.2rem;
 }
 
+section.otd {
+  color: #fff;
+}
+
+section.otd .otd-image {
+  position: relative;
+}
+
+section.otd .otd-image img {
+  width: 100%;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+section.otd .otd-image .category,
+section.otd .otd-image .heading,
+section.otd .otd-image .footer {
+  position: absolute;
+  right: 1rem;
+  left: 1rem;
+}
+
+section.otd .otd-image .category {
+  color: #eee;
+  top: 1rem;
+}
+
+section.otd .otd-image .heading {
+  top: 3rem;
+  font-size: 1.5rem;
+}
+
+section.otd .otd-image .footer {
+  bottom: 1rem;
+  font-size: 90%;
+}
+
 .simulation .box {
   padding: 16px;
 }
 
-header .category {
+section .category {
   text-transform: uppercase;
   font-size: .9rem;
 }

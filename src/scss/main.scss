@@ -21,6 +21,9 @@ section {
             transform: scale(0.99);
         } 
     }
+    h1 {
+        margin: 0;
+    }
     h4 {
         color: $lighter-color;
         font-weight: 400;
@@ -69,15 +72,47 @@ section {
     }
 }
 
+// Of The Day
+section.otd {
+    color: #fff;
+    .otd-image {
+        position: relative;
+        img {
+            width: 100%;
+            @include border-radius();
+        }
+        .category,
+        .heading,
+        .footer {
+            position: absolute;
+            right: 1rem;
+            left: 1rem;        
+        }
+        .category {
+            color: #eee;
+            top: 1rem;            
+        }
+        .heading {
+            top: 3rem;
+            font-size: 1.5rem;;      
+        }
+        .footer {
+            bottom: 1rem;
+            font-size: 90%;
+        }
+    } 
+}       
+
 .simulation .box {
     padding: 16px;
 }
 
-header {
-    .category {
-        text-transform: uppercase;
-        font-size: .9rem;
-    }
+section .category {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+header {   
     .heading {
         margin: .5rem 0;
         font-weight: 700;
