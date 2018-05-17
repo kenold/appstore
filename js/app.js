@@ -27,19 +27,21 @@ ourRequest.onerror = function() {
 ourRequest.send();
 
 function createHTML(appsData) {
-    var rawTemplate = document.getElementById("apps-template").innerHTML;
-    var compiledTemplate = Handlebars.compile(rawTemplate);
-    var ourGeneratedHTML = compiledTemplate(appsData);
+    var rawTemplate = $('#apps-template').html();
+	var kidsRawTemplate = $('#kids-template').html();
 
-    var appsContainer = document.getElementById("apps-container");
-    appsContainer.innerHTML = ourGeneratedHTML;
+    var compiledTemplate = Handlebars.compile(rawTemplate);
+	var kidsCompiledTemplate = Handlebars.compile(kidsRawTemplate);
+ 
+	$('#apps-container').html(compiledTemplate(appsData));
+	$('#kids-container').html(kidsCompiledTemplate(appsData));
 }
 
 // helpers
 Handlebars.registerHelper('ifEquals', function(a, b, options) {
-  if (a === b) {
-    return options.fn(this);
-  }
+	if (a === b) {
+		return options.fn(this);
+	}
 
   return options.inverse(this);
 });
