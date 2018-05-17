@@ -45,6 +45,15 @@ section p {
   padding: 10px 16px;
 }
 
+.featured .content .ft-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.featured .ft-image {
+  position: relative;
+}
+
 .featured .ft-image img {
   width: 100%;
   -webkit-border-radius: 10px 10px 0 0;
@@ -53,9 +62,12 @@ section p {
   border-radius: 10px 10px 0 0;
 }
 
-.featured .content .ft-title {
-  font-size: 1.8rem;
-  margin: 0;
+.featured .ft-image .btn-play {
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .simulation .box {

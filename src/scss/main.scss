@@ -39,14 +39,25 @@ section {
     }
     .content {
         padding: 10px 16px;
+        .ft-title {
+            font-size: 1.8rem;
+            margin: 0;
+        }
     }
-    .ft-image img {
-        width: 100%;
-        @include border-radius(10px, 10px, 0, 0);
-    }
-    .content .ft-title {
-        font-size: 1.8rem;
-        margin: 0;
+    .ft-image {
+        position: relative;
+        img {
+            width: 100%;
+            @include border-radius(10px, 10px, 0, 0);
+        }
+        .btn-play {
+            color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // use transform since image WxH is not known
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
