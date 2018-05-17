@@ -12,11 +12,13 @@
 <body>
 
     <div class="container">
-        <section class="featured">
+        <section class="date">
             <header>
-                <div class="date">Wednesday, May 16</div>
-                <h1 class="heading-today">Today</h1>
+                <h5 class="date-sub">Wednesday, May 16</h5>
+                <h1 class="date-heading">Today</h1>
             </header>
+        </section>
+        <section class="featured">            
             <div class="box">                
                 <div class="ft-image">
                     <img src="assets/images/featured/ft-ikea-ar.jpg" alt="New Ways to Learn: Art and Culture">
@@ -37,8 +39,8 @@
 
         <section class="otd">            
             <div class="box">                
-                <div class="otd-image">
-                    <img src="assets/images/featured/otd-apple-watch.jpg" alt="Ap of The Day">
+                <div class="otd-block">
+                    <img src="assets/images/featured/otd-apple-watch.jpg" class="full-img" alt="App of The Day">
                     <h4 class="category">App of the Day</h4>
                     <h1 class="heading">Push It to the Limit</h1>
                     <div class="footer">Track your fitness goals with Pedometer++ and Apple Watch</div>
@@ -84,8 +86,38 @@
                         </div> <!-- /.media-->
                     {{/each}}
                 </script>
-            </div> <!-- /.box>
+            </div> <!-- /.box -->
         </section> <!-- /.simulation -->
+
+        <section class="date middle">
+            <header>
+                <h5 class="date-sub">May 15</h5>
+                <h1 class="date-heading">Tuesday</h1>
+            </header>
+        </section>
+
+        <section class="otd">            
+            <div class="box game">                
+                <div class="otd-block">
+                    <img src="assets/images/featured/otd-bowling-game.jpg" class="half-img" alt="Game of The Day">                    
+                    <h1 class="heading bold">Game<br>of The<br>Day</h1>
+                    <div class="media">
+                        <div class="media-cover">
+                            <img src="assets/images/icons/kingpin-bowling.png" alt="Kingpin Bowling">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-title">Kingpin Bowling</h3>
+                            <p class="media-slogan">Endless arcade bowling.</p>
+                        </div>
+                        <aside>                           
+                            <div class="btn-price">Get</div>                                                        
+                            <p class="in-app">In-App Purchases</p>                                  
+                        </aside>                        
+                    </div> <!-- /.media-->
+                </div>                      
+            </div> <!-- /.box -->           
+        </section>
+
     </div> <!-- /.container -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
