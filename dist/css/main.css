@@ -25,7 +25,15 @@ section .box:hover {
   transform: scale(0.99);
 }
 
-section h1 {
+section .box header {
+  padding: 16px 16px 0;
+}
+
+section .box .media {
+  padding: 16px;
+}
+
+section h1, section h5 {
   margin: 0;
 }
 
@@ -38,6 +46,11 @@ section p {
   color: #8e8e93;
   font-weight: 300;
   margin: .5rem 0;
+}
+
+section .category {
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 
 .featured header {
@@ -87,11 +100,11 @@ section.otd {
   color: #fff;
 }
 
-section.otd .otd-image {
+section.otd .otd-block {
   position: relative;
 }
 
-section.otd .otd-image img {
+section.otd .otd-block .full-img {
   width: 100%;
   -webkit-border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
@@ -99,36 +112,68 @@ section.otd .otd-image img {
   border-radius: 10px 10px 10px 10px;
 }
 
-section.otd .otd-image .category,
-section.otd .otd-image .heading,
-section.otd .otd-image .footer {
+section.otd .otd-block .half-img {
+  width: 100%;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+
+section.otd .otd-block .category,
+section.otd .otd-block .heading,
+section.otd .otd-block .footer {
   position: absolute;
   right: 1rem;
   left: 1rem;
 }
 
-section.otd .otd-image .category {
+section.otd .otd-block .category {
   color: #eee;
   top: 1rem;
 }
 
-section.otd .otd-image .heading {
+section.otd .otd-block .heading {
   top: 3rem;
   font-size: 1.5rem;
 }
 
-section.otd .otd-image .footer {
+section.otd .otd-block .heading.bold {
+  text-transform: uppercase;
+  top: auto;
+  bottom: 7rem;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: .9;
+}
+
+section.otd .otd-block .footer {
   bottom: 1rem;
   font-size: 90%;
 }
 
-.simulation .box {
-  padding: 16px;
+section.otd .box.game {
+  background: #F8BA23;
 }
 
-section .category {
-  text-transform: uppercase;
-  font-size: .9rem;
+section.otd .media .media-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+section.otd .media .media-slogan {
+  color: #fff;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+section.otd p {
+  color: #fff;
+}
+
+.date.middle {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 header .heading {
@@ -137,15 +182,16 @@ header .heading {
   font-size: 1.5rem;
 }
 
-header .date {
+header .date-sub {
   color: #8e8e93;
-  font-size: .6em;
   text-transform: uppercase;
   font-size: .8rem;
+  font-weight: 500;
 }
 
-header .heading-today {
-  margin: .5rem 0;
+header .date-heading {
+  margin: .3rem 0;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
