@@ -64,11 +64,19 @@ section p {
 
 .featured .ft-image .btn-play {
   font-size: 1.5rem;
-  opacity: .8;
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: .98;
   transform: translate(-50%, -50%);
+}
+
+.featured .ft-image .btn-play .fa-circle {
+  color: #53412e;
+}
+
+.featured .ft-image .btn-play .fa-play {
+  color: #d3cfc9;
 }
 
 .simulation .box {
