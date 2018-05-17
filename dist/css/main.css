@@ -66,6 +66,11 @@ section .category {
   padding: 10px 16px;
 }
 
+.featured .content .ft-category {
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
 .featured .content .ft-title {
   font-size: 1.8rem;
   margin: 0;

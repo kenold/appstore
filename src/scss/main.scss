@@ -57,6 +57,10 @@ section {
     }
     .content {
         padding: 10px  $main-padding;
+        .ft-category {
+            font-size: .9rem;
+            text-transform: uppercase;
+        }
         .ft-title {
             font-size: 1.8rem;
             margin: 0;
