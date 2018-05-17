@@ -26,11 +26,26 @@ section .box:hover {
   transform: scale(0.99);
 }
 
-section.featured header, section .content {
-  padding: 16px;
+section h4 {
+  color: #8e8e93;
+  font-weight: 400;
 }
 
-.featured-container .ft-image img {
+section p {
+  color: #8e8e93;
+  font-weight: 300;
+  margin: .5rem 0;
+}
+
+.featured header {
+  padding: 16px 0;
+}
+
+.featured .content {
+  padding: 10px 16px;
+}
+
+.featured .ft-image img {
   width: 100%;
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -38,15 +53,18 @@ section.featured header, section .content {
   border-radius: 10px 10px 0 0;
 }
 
+.featured .content .ft-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
 .simulation .box {
   padding: 16px;
 }
 
 header .category {
-  color: #8e8e93;
   text-transform: uppercase;
   font-size: .9rem;
-  font-weight: 400;
 }
 
 header .heading {
