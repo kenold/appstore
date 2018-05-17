@@ -12,10 +12,10 @@ section {
 
 section .box {
   background: #fff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
   -webkit-box-shadow: 0px 14px 74px -22px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 0px 14px 74px -22px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 14px 74px -22px rgba(0, 0, 0, 0.58);
@@ -32,9 +32,10 @@ section.featured header, section .content {
 
 .featured-container .ft-image img {
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
-  -moz-border-radius: 10px 10px 0px 0px;
-  -webkit-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .simulation .box {
@@ -94,10 +95,10 @@ header .heading-today {
 
 .media-cover img {
   width: 50px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .media-title {
@@ -119,10 +120,10 @@ aside {
 aside .btn-price {
   background-color: #f0f1f7;
   padding: .4rem;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 15px 10px 10px 10px;
+  -moz-border-radius: 15px 10px 10px 10px;
+  -ms-border-radius: 15px 10px 10px 10px;
+  border-radius: 15px 10px 10px 10px;
   text-transform: uppercase;
   font-weight: 500;
   color: #007aff;
