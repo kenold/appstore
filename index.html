@@ -40,7 +40,7 @@
         <section class="otd">            
             <div class="box">                
                 <div class="otd-block">
-                    <img src="assets/images/featured/otd-apple-watch.jpg" class="full-img" alt="App of The Day">
+                    <img src="assets/images/featured/ft-apple-watch.jpg" class="full-img" alt="App of The Day">
                     <h4 class="category">App of the Day</h4>
                     <h1 class="heading">Push It to the Limit</h1>
                     <div class="footer">Track your fitness goals with Pedometer++ and Apple Watch</div>
@@ -59,31 +59,33 @@
 
                 <script id="apps-template" type="text/x-handlebars-template">
                     {{#each apps}}
-                        <div class="media">
-                            <div class="media-cover">
-                                <img src="assets/images/icons/{{icon}}" alt="{{name}}">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="media-title">{{name}}</h3>
-                                <p class="media-slogan">{{slogan}}</p>
-                            </div>
-                            <aside>
-                                {{#if wasDownloaded }}
-                                    <span class="cloud">
-                                        <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
-                                    </span>
-                                {{else}}                                                                                                            
-                                    {{#ifEquals price "Free"}}
-                                        <div class="btn-price">Get</div>
-                                        {{#if inAppPurchase}}                                    
-                                            <p class="in-app">In-App Purchases</p>
-                                        {{/if}}
-                                    {{else}}
-                                        <div class="btn-price">${{price}}</div>
-                                    {{/ifEquals}} 
-                                {{/if}}                           
-                            </aside>                        
-                        </div> <!-- /.media-->
+                        {{#ifEquals category "Simulation"}}
+                            <div class="media">
+                                <div class="media-cover">
+                                    <img src="assets/images/icons/{{icon}}" alt="{{name}}">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-title">{{name}}</h3>
+                                    <p class="media-slogan">{{slogan}}</p>
+                                </div>
+                                <aside>
+                                    {{#if wasDownloaded }}
+                                        <span class="cloud">
+                                            <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
+                                        </span>
+                                    {{else}}                                                                                                            
+                                        {{#ifEquals price "Free"}}
+                                            <div class="btn-price">Get</div>
+                                            {{#if inAppPurchase}}                                    
+                                                <p class="in-app">In-App Purchases</p>
+                                            {{/if}}
+                                        {{else}}
+                                            <div class="btn-price">${{price}}</div>
+                                        {{/ifEquals}} 
+                                    {{/if}}                           
+                                </aside>                        
+                            </div> <!-- /.media-->
+                        {{/ifEquals}}
                     {{/each}}
                 </script>
             </div> <!-- /.box -->
@@ -99,11 +101,11 @@
         <section class="otd">            
             <div class="box game">                
                 <div class="otd-block">
-                    <img src="assets/images/featured/otd-bowling-game.jpg" class="half-img" alt="Game of The Day">                    
+                    <img src="assets/images/featured/ft-kingpin-bowling.jpg" class="half-img" alt="Game of The Day">                    
                     <h1 class="heading bold">Game<br>of The<br>Day</h1>
                     <div class="media">
                         <div class="media-cover">
-                            <img src="assets/images/icons/kingpin-bowling.png" alt="Kingpin Bowling">
+                            <img src="assets/images/icons/kingpin-bowling.jpg" alt="Kingpin Bowling">
                         </div>
                         <div class="media-body">
                             <h3 class="media-title">Kingpin Bowling</h3>
@@ -121,7 +123,7 @@
         <section class="featured">            
             <div class="box">                
                 <div class="ft-image">
-                    <img src="assets/images/featured/formula-drift.jpg" alt="Formula Drift">
+                    <img src="assets/images/featured/ft-formula-drift.jpg" alt="Formula Drift">
                     <div class="btn-play">
                         <span class="fa-stack fa-1x">
                             <i class="fas fa-circle fa-stack-2x"></i>
@@ -136,6 +138,49 @@
                 </div>            
             </div> <!-- /.box -->           
         </section>
+
+        <section class="kids">
+            <div class="box">
+                <header>
+                    <h4 class="category">The Daily List</h4>
+                    <h1 class="heading">Healthy Habits for Kids</h1>
+                </header>
+
+                <div id="kids-container"></div>
+
+                <script id="kids-template" type="text/x-handlebars-template">
+                    {{#each apps}}
+                        {{#ifEquals category "Kids"}}
+                            <div class="media">
+                                <div class="media-cover">
+                                    <img src="assets/images/icons/{{icon}}" alt="{{name}}">
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-title">{{name}}</h3>
+                                    <p class="media-slogan">{{slogan}}</p>
+                                </div>
+                                <aside>
+                                    {{#if wasDownloaded }}
+                                        <span class="cloud">
+                                            <img src="assets/images/icons/cloud.png" alt="Re-Download from Cloud">
+                                        </span>
+                                    {{else}}                                                                                                            
+                                        {{#ifEquals price "Free"}}
+                                            <div class="btn-price">Get</div>
+                                            {{#if inAppPurchase}}                                    
+                                                <p class="in-app">In-App Purchases</p>
+                                            {{/if}}
+                                        {{else}}
+                                            <div class="btn-price">${{price}}</div>
+                                        {{/ifEquals}} 
+                                    {{/if}}                           
+                                </aside>                        
+                            </div> <!-- /.media-->
+                        {{/ifEquals}}
+                    {{/each}}
+                </script>
+            </div> <!-- /.box -->
+        </section> <!-- /.simulation -->
 
     </div> <!-- /.container -->
     
