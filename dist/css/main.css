@@ -167,8 +167,12 @@ section.otd .box.game {
   background: #F8BA23;
 }
 
+section.otd .box.app {
+  background: #443a82;
+}
+
 section.otd .media .media-title {
-  font-size: 1.1rem;
+  font-size: .9rem;
   font-weight: 500;
 }
 
