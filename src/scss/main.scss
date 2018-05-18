@@ -1,38 +1,56 @@
 @import "partials/variables";
 @import "partials/colors";
 @import "helpers/mixins";
-
 $ff: 'Roboto', sans-serif;
-
 body {
     padding: 1.5rem;
     font-family: $ff;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1rem;    
 }
 
 .container {
-    max-width: 414px;
+    width: 414px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin: 0 auto;
 }
-section {        
-    margin-bottom: 1.4rem;       
+
+main {
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 2em;
+}
+footer {
+    flex-shrink: 0;
+}
+
+// .container {
+//     max-width: 414px;
+//     margin: 0 auto;
+// }
+
+section {
+    margin-bottom: 1.4rem;
     .box {
         background: #fff;
         @include border-radius();
         @include box-shadow();
-        transition: all .2s ease-in-out;        
+        transition: all .2s ease-in-out;
         &:hover {
             transform: scale(0.99);
         }
         header {
-            padding:  $main-padding $main-padding 0;
+            padding: $main-padding $main-padding 0;
         }
         .media {
             padding: $main-padding;
         }
     }
-    h1, h5 {
+    h1,
+    h5 {
         margin: 0;
     }
     h4 {
@@ -53,10 +71,10 @@ section {
 // FEATURED
 .featured {
     header {
-        padding:  $main-padding 0;
+        padding: $main-padding 0;
     }
     .content {
-        padding: 10px  $main-padding;
+        padding: 10px $main-padding;
         .ft-category {
             font-size: .9rem;
             text-transform: uppercase;
@@ -66,7 +84,6 @@ section {
             margin: 0;
         }
     }
-
     .ft-image {
         position: relative;
         img {
@@ -74,19 +91,18 @@ section {
             @include border-radius(10px, 10px, 0, 0);
         }
         .btn-play {
-            font-size: 1.5rem;            
+            font-size: 1.5rem;
             position: absolute;
             top: 50%;
             left: 50%;
-            opacity: .98;
-            // use transform since image WxH is not known
+            opacity: .98; // use transform since image WxH is not known
             transform: translate(-50%, -50%);
             .fa-circle {
                 color: #53412e;
             }
             .fa-play {
                 color: #d3cfc9;
-                font-size: 1.2rem;                
+                font-size: 1.2rem;
             }
         }
     }
@@ -110,15 +126,16 @@ section.otd {
         .footer {
             position: absolute;
             right: 1rem;
-            left: 1rem;        
+            left: 1rem;
         }
         .category {
             color: #eee;
-            top: 1rem;            
+            top: 1rem;
         }
         .heading {
             top: 3rem;
-            font-size: 1.5rem;;      
+            font-size: 1.5rem;
+            ;
         }
         .heading.bold {
             text-transform: uppercase;
@@ -132,8 +149,8 @@ section.otd {
             bottom: 1rem;
             font-size: 90%;
         }
-    } 
-    .box.game {        
+    }
+    .box.game {
         background: #F8BA23;
     }
     .media .media-title {
@@ -148,21 +165,22 @@ section.otd {
     p {
         color: #fff;
     }
-}   
+}
 
 // date header
 .date.middle {
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
-header {      
+
+header {
     .heading {
         margin: .5rem 0;
         font-weight: 700;
         font-size: 1.5rem;
     }
     .date-sub {
-        color: $lighter-color;        
+        color: $lighter-color;
         text-transform: uppercase;
         font-size: .8rem;
         font-weight: 400;
@@ -177,7 +195,7 @@ header {
 .media {
     display: flex;
     align-content: flex-start;
-    padding:  $main-padding 0;
+    padding: $main-padding 0;
     align-items: center;
     position: relative;
     &:not(:last-child):after {
@@ -190,26 +208,31 @@ header {
         border-bottom: 1px solid $line-color;
     }
 }
+
 .media-body {
     flex: 1;
 }
+
 .media-cover {
-    margin-right:  $main-padding;
+    margin-right: $main-padding;
     img {
         width: 50px;
         @include border-radius();
     }
 }
+
 .media-title {
     margin: 0 1rem .2rem 0;
     font-size: .9rem;
     font-weight: 500;
 }
+
 .media .media-slogan {
     color: $lighter-color;
     margin: 0;
     font-size: .8rem;
 }
+
 aside {
     text-align: center;
     .btn-price {
