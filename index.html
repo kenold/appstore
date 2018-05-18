@@ -184,6 +184,9 @@
                                             {{/if}}
                                         {{else}}
                                             <div class="btn-price">${{price}}</div>
+                                            {{#if inAppPurchase}}                                    
+                                                <p class="in-app">In-App Purchases</p>
+                                            {{/if}}
                                         {{/ifEquals}} 
                                     {{/if}}                           
                                 </aside>                        
