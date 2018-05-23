@@ -13,8 +13,7 @@ body {
     margin: 0;
     font-family: $ff;
     font-weight: 400;
-    font-size: 1rem;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);   
+    font-size: 1rem;       
 }
 
 a {
@@ -32,12 +31,7 @@ ul {
     flex-direction: column;
     max-width: 414px;
     height: 96vh;    
-
-    margin: 5vh auto 5vh auto;
-    border: 10px solid rgba(0,0,0,0.8);
-    border-bottom-width: 70px;
-    @include border-radius();
-    box-shadow: 0 0 50px  rgba(0,0,0,0.3);
+    margin: 0 auto 5vh auto;    
 }
 
 .wrapper > * {
@@ -47,8 +41,7 @@ ul {
 
 // turn on scroll for for content
 main.content {
-    background: #fff;
-    box-shadow:inset 0 5px 0 rgba(0,0,0,0.1);
+    background: #fff;    
     padding: 20px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;    
@@ -290,7 +283,7 @@ aside {
     }
 }
 
-.footer {
+.footer-nav {
     display: flex;
     border-top:1px solid #bbb;    
     a {
@@ -310,3 +303,10 @@ aside {
         font-size: 1.2rem;
     }
 }
+
+// desktop
+@media (min-width: 992px) {
+    body {
+        background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    }
+ }

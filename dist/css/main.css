@@ -11,7 +11,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 
 a {
@@ -29,14 +28,7 @@ ul {
   flex-direction: column;
   max-width: 414px;
   height: 96vh;
-  margin: 5vh auto 5vh auto;
-  border: 10px solid rgba(0, 0, 0, 0.8);
-  border-bottom-width: 70px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -ms-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 5vh auto;
 }
 
 .wrapper > * {
@@ -45,7 +37,6 @@ ul {
 
 main.content {
   background: #fff;
-  box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -337,12 +328,12 @@ aside .cloud img {
   width: 30px;
 }
 
-.footer {
+.footer-nav {
   display: flex;
   border-top: 1px solid #bbb;
 }
 
-.footer a {
+.footer-nav a {
   flex: 1;
   text-align: center;
   padding: 1rem;
@@ -351,12 +342,18 @@ aside .cloud img {
   font-size: .8rem;
 }
 
-.footer a.active {
+.footer-nav a.active {
   color: #3C73FD;
 }
 
-.footer i {
+.footer-nav i {
   display: block;
   padding-bottom: .5rem;
   font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  body {
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  }
 }
