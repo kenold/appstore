@@ -287,9 +287,10 @@ aside {
     display: flex;
     border-top:1px solid #bbb;    
     a {
-        flex: 1;
+        // display: flex;
+        flex: 1 1 20%;
         text-align: center;
-        padding: 1rem;
+        padding: 1rem 0;
         background: #fff;
         color: rgba(0,0,0,0.5);
         font-size: .8rem;
